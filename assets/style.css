@@ -1,0 +1,40 @@
+body { background-color: #111; }
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    transform-style: preserve-3d;
+}
+.earth {
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%,-50%);
+ width: 450px;
+ height: 450px;
+ background-image: url('https://cdn2.nextinpact.com/images/bd/news/135212.jpeg');
+ background-size: cover;
+ background-repeat: repeat-x;
+ border-radius: 50%;
+ box-shadow: inset 16px 0 40px 3px rgba(0,0,0,0.9), inset -3px 0 5px 2px rgba(255,255,255,0.16);
+ animation: animateEarth 30s linear infinite;
+
+}
+
+@keyframes animateEarth
+{
+    0%
+    { 
+        background-position: 0 0;
+
+    }
+    100%
+    {
+        background-position: -1280px 0;
+    }
+}
+
+.earth:hover {
+    animation-play-state: paused ;
+}
